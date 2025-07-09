@@ -28,7 +28,6 @@ body {
   margin-bottom: 20px;
   font-weight: 600;
 }
-
 .search-box {
   width: 100%;
   padding: 10px 12px;
@@ -39,7 +38,6 @@ body {
   outline: none;
   background-color: #fff;
 }
-
 
 .menu {
   list-style: none;
