@@ -1,0 +1,202 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Layout */
+.settings-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f0eaff;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.menu li img {
+  width: 18px;
+  height: 18px;
+}
+
+.menu li:hover {
+  background-color: #e3d9ff;
+}
+
+.menu li.active {
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 0;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Form Sections */
+.form-section {
+  margin-top: 30px;
+}
+
+.form-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form-section p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Inputs */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #800080;
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+/* Divider */
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Bold Paragraph */
+.bold {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #f0eaff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .sidebar.show {
+    display: block;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar h2,
+  .header h2 {
+    font-size: 1.2rem;
+  }
+}
