@@ -31,12 +31,15 @@ body {
 
 .search-box {
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border-radius: 6px; /* updated from 8px for better shape */
   font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #fff;
 }
+
 
 .menu {
   list-style: none;
